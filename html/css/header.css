@@ -1,0 +1,59 @@
+.header{
+    width: 1600px;
+}
+.background {
+    display: flex;
+    height: 75px;
+    background-color: #222222;
+    width: 1600px;
+    align-items: center;
+    justify-content: center;
+    gap: 859px;
+}
+
+.logo-and-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 41px;
+    position: relative;
+    bottom: 1px;
+}
+
+.logo{
+    width:44px ;
+    height:38px ;
+}
+
+.search {
+    margin-top: 10px;
+    width: 26px;
+    height: 27px;
+}
+
+.menu-profile-basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 33px;
+    position: relative;
+    top: 4px;
+}
+.menu{
+    width:32px;
+    height:23px;
+}
+
+.profile {
+    width:29px;
+    height:29px;
+    position: relative;
+    bottom: 1px;
+}
+
+.basket {
+    width:41px;
+    height:37px;
+    position: relative;
+    bottom: 5px;
+}
