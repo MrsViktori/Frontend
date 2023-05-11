@@ -1,6 +1,7 @@
 .header {
     width: 100%;
 }
+
 .header__background {
     display: flex;
     height: 75px;
@@ -18,9 +19,10 @@
     position: relative;
     bottom: 1px;
 }
-.logo{
-    width:44px ;
-    height:38px ;
+
+.logo {
+    width: 44px;
+    height: 38px;
 }
 
 .search {
@@ -28,6 +30,7 @@
     width: 26px;
     height: 27px;
 }
+
 .header__menu-profile-basket {
     display: flex;
     flex-direction: row;
@@ -36,20 +39,22 @@
     position: relative;
     top: 4px;
 }
-.menu{
-    width:32px;
-    height:23px;
+
+.menu {
+    width: 32px;
+    height: 23px;
 }
 
 .profile {
-    width:29px;
-    height:29px;
+    width: 29px;
+    height: 29px;
     position: relative;
     bottom: 1px;
 }
+
 .basket {
-    width:41px;
-    height:37px;
+    width: 41px;
+    height: 37px;
     position: relative;
     bottom: 5px;
 }
