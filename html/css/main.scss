@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$pink-color:#F16D7F;
+$background-color:#F1E4E6;
+$white-color:#FFFFFF;
+$text-color:#222222;
+
+@mixin font-weight{
+  font-weight: 700
+}
+@mixin font-weight-400{
+  font-weight: 400;
+}
+
+
 .class-body {
   width: 100%;
   margin: 0 auto;
@@ -9,7 +23,6 @@
   align-items: center;
   text-transform: uppercase;
 }
-
 .main {
   width: 100%;
   min-width: 1600px;
@@ -17,10 +30,9 @@
   flex-direction: column;
   align-items: center;
 }
-
 /*block main-backet*/
 .main__men-and-text {
-  background-color: #F1E4E6;
+  background-color: $background-color;
   height: 764px;
   width: 100%;
   display: flex;
@@ -29,12 +41,10 @@
   flex-direction: row;
   gap: 63px;
 }
-
 .men {
   width: 801px;
   height: 764px;
 }
-
 .text-and-stick {
   display: flex;
   flex-direction: row;
@@ -44,7 +54,6 @@
   top: 289px;
   gap: 16px;
 }
-
 .text-name {
   width: 500px;
   height: 93px;
@@ -53,28 +62,26 @@
 }
 
 .text-name__title {
-  color: #222222;
+  color:$text-color;
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
   letter-spacing: 0;
 }
-
 .text-name__body-first {
-  font-weight: 700;
+  @include font-weight;
   font-size: 31px;
   line-height: 37px;
   letter-spacing: 0;
 }
 
 .text-name__body-two {
-  font-weight: 700;
+  @include font-weight;
   font-size: 37px;
   line-height: 45px;
   letter-spacing: 0;
-  color: #F16D7F;
+  color: $pink-color;
 }
-
 /*block block-advertisement*/
 .main__advertisement {
   display: flex;
@@ -94,7 +101,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .women-background {
   background-image: url("../image/women.png");
 }
@@ -106,7 +112,6 @@
 .kids-background {
   background-image: url("../image/kids.png");
 }
-
 .item__text {
   width: 180px;
   height: 50px;
@@ -116,21 +121,20 @@
 }
 
 .item-text__title {
-  color: #F1E4E6;
-  font-weight: 400;
+  color: $background-color;
+  @include font-weight-400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
 }
 
 .item-text__who {
-  color: #F16D7F;
-  font-weight: 700;
+  color: $pink-color;
+  @include font-weight;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
 }
-
 .img-background-accesories {
   background-image: url("../image/accesories.png");
   width: 1140px;
@@ -139,23 +143,20 @@
   align-items: center;
   justify-content: center;
 }
-
 .accessories-text__title {
-  color: #FFFFFF;
-  font-weight: 400;
+  color: $white-color;
+  @include font-weight-400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
 }
-
 .accessories-text__content {
-  font-weight: 700;
+  @include font-weight;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-  color: #F16D7F;
+  color: $pink-color;
 }
-
 /*block-with-shares*/
 .main__block-with-shares {
   display: flex;
@@ -164,36 +165,32 @@
   gap: 48px;
   width: 1140px;
 }
-
 .block-with-shares__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
-
 .shares-text__title {
   width: 182px;
   height: 36px;
   font-size: 25px;
-  font-weight: 400;
-  color: #222222;
+  @include font-weight-400;
+  color: $text-color;
   line-height: 36px;
   position: relative;
   margin-top: 96px;
   text-transform: none;
 }
-
 .shares-text__content {
   width: 336px;
   height: 17px;
-  font-weight: 400;
+  @include font-weight-400;
   font-size: 14px;
-  color: #222222;
+  color: $text-color;
   line-height: 17px;
   text-transform: none;
 }
-
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -207,11 +204,10 @@
   width: 360px;
   height: 581px;
 }
-
 .container__btn-buy {
   background: rgba(58, 56, 56, 0.86);
-  color: #FFFFFF;
-  transition: all 0.2s linear;
+  color: $white-color;
+  transition: all .2s linear;
   width: 138px;
   height: 43px;
   display: none;
@@ -224,37 +220,32 @@
   margin-top: 150px;
   margin-left: 120px;
 }
-
 .container__img:hover button {
   display: block;
-  transition: all 0.3s;
+  transition: all .3s;
   filter: brightness(1);
 }
-
 .container__btn-buy:hover {
-  background-color: #F16D7F;
+  background-color: $pink-color;
 }
-
 .container-btn-buy__basket {
   width: 26px;
   height: 24px;
-  color: #FFFFFF;
+  color: $white-color;
   margin-top: 5px;
   margin-right: 5px;
 }
-
 .container-btn-buy__text {
   width: 72px;
   height: 17px;
-  font-weight: 400;
+  @include font-weight-400;
   font-size: 16px;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: $white-color;
   position: relative;
   bottom: 5px;
 }
-
 .container__img {
   display: flex;
   justify-content: center;
@@ -262,34 +253,29 @@
   width: 360px;
   height: 581px;
 }
-
 .container-img__picture {
   width: 360px;
   height: 420px;
   transition: all 0.2s;
 }
-
 .container-img__picture:hover {
   filter: brightness(50%);
 }
-
 .container__texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .container-texts__first {
   width: 148px;
   height: 16px;
   font-size: 13px;
   line-height: 16px;
-  font-weight: 400;
-  color: #222222;
+  @include font-weight-400;
+  color: $text-color;
   position: relative;
   left: 12px;
 }
-
 .container-texts__two {
   width: 315px;
   height: 51px;
@@ -301,38 +287,34 @@
   left: 12px;
   text-transform: none;
 }
-
 .container-texts__three {
   width: 52px;
   height: 19px;
-  font-weight: 400;
+  @include font-weight-400;
   font-size: 16px;
   line-height: 19px;
-  color: #F16D7F;
+  color: $pink-color;
   position: relative;
   bottom: 10px;
   left: 12px;
 }
-
 .btn {
   width: 211px;
   height: 47px;
   background-color: #E5E5E5;
   color: #F26376;
   border: 1px solid #FF6A6A;
-  font-weight: 400;
+  @include font-weight-400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   margin-top: 4px;
   transition: color 0.2s linear;
 }
-
 .btn:hover {
-  background-color: #F16D7F;
-  color: #FFFFFF;
+  background-color: $pink-color;
+  color: $white-color;
 }
-
 /*block other*/
 .other {
   margin-top: 96px;
@@ -340,7 +322,6 @@
   height: 341px;
   flex-direction: column;
 }
-
 .other__background {
   flex-flow: row nowrap;
   background-color: #222224;
@@ -351,7 +332,6 @@
   justify-content: center;
   gap: 30px;
 }
-
 .other-background__blocks {
   width: 360px;
   height: 134px;
@@ -359,7 +339,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .img-car {
   width: 45px;
   height: 32px;
@@ -370,13 +349,11 @@
   width: 40px;
   height: 40px;
 }
-
 .img-assurance {
   width: 47px;
   height: 35px;
   margin-top: 3px;
 }
-
 .other-background__text-body {
   font-size: 14px;
   line-height: 17px;
@@ -388,11 +365,10 @@
   margin-top: 16px;
   text-transform: none;
 }
-
 .other-background__text-title {
   font-size: 20px;
   line-height: 24px;
-  font-weight: 400;
+  @include font-weight-400;
   text-align: center;
   color: #FBFBFB;
   width: 180px;
@@ -400,7 +376,6 @@
   margin-top: 28px;
   text-transform: none;
 }
-
 /*block subscribe*/
 .subscribe {
   width: 100%;
@@ -413,7 +388,6 @@
   align-items: center;
   gap: 224px;
 }
-
 .subscribe__message {
   display: flex;
   flex-direction: column;
@@ -427,18 +401,16 @@
   width: 96px;
   height: 96px;
 }
-
 .subscribe-message__text {
   width: 360px;
   height: 99px;
   text-align: center;
   font-size: 20px;
-  font-weight: 400;
+  @include font-weight-400;
   line-height: 24px;
   color: #222224;
   text-transform: none;
 }
-
 .subscribe__btn-input {
   display: flex;
   flex-direction: column;
@@ -446,9 +418,8 @@
   width: 557px;
   height: 142px;
 }
-
 .subscribe-btn-input__text-first {
-  font-weight: 700;
+  @include font-weight;
   font-size: 24px;
   line-height: 40px;
   text-align: center;
@@ -457,14 +428,13 @@
 }
 
 .subscribe-btn-input__text-two {
-  font-weight: 400;
+  @include font-weight-400;
   font-size: 18px;
   line-height: 30px;
   text-align: center;
   color: #222224;
   text-transform: none;
 }
-
 .input-btn {
   display: flex;
   justify-content: center;
@@ -474,18 +444,15 @@
   height: 49px;
   margin-top: 32px;
 }
-
 .input-btn__button:hover {
-  background-color: #FFFFFF;
-  color: #F16D7F;
-  border: 1px solid #F16D7F;
+  background-color: $white-color;
+  color: $pink-color;
+  border: 1px solid $pink-color;
 }
-
 .input-btn__text:hover {
   color: black;
-  background-color: #FFFFFF;
+  background-color: $white-color;
 }
-
 .input-btn__text {
   background-color: #E1E1E1;
   border: 1px solid #E1E1E1;
@@ -493,25 +460,23 @@
   width: 256px;
   height: 49px;
   font-size: 14px;
-  font-weight: 400;
+  @include font-weight-400;
   line-height: 17px;
   text-align: center;
 }
-
 .input-btn__button {
-  background-color: #F16D7F;
-  border: 1px solid #F16D7F;
+  background-color: $pink-color;
+  border: 1px solid $pink-color;
   border-radius: 0 25px 25px 0;
   width: 100px;
   height: 53px;
   font-size: 14px;
-  font-weight: 400;
+  @include font-weight-400;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: $white-color;
   transition: all 0.2s;
 }
-
 /*footer*/
 .footer {
   display: flex;
@@ -522,17 +487,15 @@
   background-color: #222224;
   gap: 550px;
 }
-
 .footer__text {
   width: 332px;
   height: 19px;
   font-size: 16px;
-  font-weight: 400;
+  @include font-weight-400;
   line-height: 19px;
   color: #FBFBFB;
   text-transform: none;
 }
-
 .footer__link {
   display: flex;
   gap: 7px;
@@ -542,17 +505,14 @@
   align-items: center;
   transition: all 0.2s;
 }
-
 .footer-link-img__social {
   width: 12px;
   height: 12px;
   filter: brightness(0);
 }
-
-.footer-link-img__social:hover {
+.footer-link-img__social:hover{
   filter: brightness(1);
 }
-
 .footer-link__img {
   width: 32px;
   height: 32px;
@@ -560,11 +520,9 @@
   justify-content: center;
   filter: brightness(1);
 }
-
 .footer-link__img:hover {
-  background-color: #F16D7F;
+  background-color: $pink-color;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1600px) {
   .main {
     min-width: 768px;
@@ -614,9 +572,11 @@
   .women-background {
     background-image: url("../image/770px/women.svg");
   }
+
   .men-background {
     background-image: url("../image/770px/men.svg");
   }
+
   .kids-background {
     background-image: url("../image/770px/kids.svg");
   }
@@ -663,5 +623,3 @@
     width: 251px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
