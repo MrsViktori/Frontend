@@ -5,11 +5,9 @@ $background-color:#F8F3F4;
 $color-text:#222222;
 $color-white:#FFFFFF;
 
-@mixin font-weight-300{
-  font-weight: 300;
-}
-@mixin font-weight-400{
-  font-weight: 400;
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
 }
 
 .body-class {
@@ -37,9 +35,8 @@ $color-white:#FFFFFF;
   justify-content: center;
 }
 .section-title__text{
-  width: 194px;
-  height: 29px;
-  @include font-weight-400;
+  @include size(194px, 29px);
+  font-weight:400;
   font-size: 24px;
   line-height: 29px;
   color: $color-pink;
@@ -48,46 +45,46 @@ $color-white:#FFFFFF;
 }
 .section__order{
   display: flex;
-  width: 100%;
-  height: 775px;
+  @include size(100%, 775px);
   align-items: flex-start;
   justify-content: center;
   flex-flow: row wrap;
   margin-top: 96px;
   gap: 128px;
 }
-.section-order__purchases{
-  width: 652px;
-  height: 652px;
+.section-order-purchases{
+  @include size(652px, 652px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-
-}
-.section-order-purchases__first-purchase{
-  width: 652px;
-  height: 306px;
-  display: flex;
-  flex-direction: row;
-  gap: 31px;
-  box-shadow: 20px 20px 15px #E5E5E5;
+    &__first-purchase{
+      @include size(652px, 306px);
+      display: flex;
+      flex-direction: row;
+      gap: 31px;
+      box-shadow: 20px 20px 15px #E5E5E5;
+    }
+    &__text{
+      @include size(262px, 222px);
+      display: flex;
+      gap: 6px;
+      flex-direction: column;
+    }
+    &__buttons{
+      display: flex;
+      flex-direction: row;
+      gap: 193px;
+      @include size(652px, 50px);
+      justify-content: center;
+    }
 }
 .purchases-men{
-  width: 262px;
-  height: 306px;
-}
-.section-order-purchases__text{
-  width: 262px;
-  height: 222px;
-  display: flex;
-  gap: 6px;
-  flex-direction: column;
+  @include size(262px, 306px);
 }
 .section-order-purchases-text__title{
-  width: 262px;
-  height: 58px;
-  @include font-weight-400;
+  @include size(262px, 58px);
+  font-weight:400;
   font-size: 24px;
   line-height: 29px;
   color: $color-text;
@@ -95,17 +92,15 @@ $color-white:#FFFFFF;
   text-transform: uppercase;
 }
 .section-order-purchases-text__text-elements{
-  width: 105px;
-  height: 26px;
-  @include font-weight-400;
+  @include size(105px, 26px);
+  font-weight:400;
   font-size: 22px;
   line-height: 26px;
   color: #575757;
 }
 .section-order-purchases-text__price-numbers{
-  width: 22px;
-  height: 26px;
-  @include font-weight-400;
+  @include size(22px, 26px);
+  font-weight:400;
   font-size: 22px;
   line-height: 26px;
   color: #EF5B70;
@@ -115,11 +110,10 @@ $color-white:#FFFFFF;
   background-color: $color-white;
   color: #656565;
   border: 1px solid #EAEAEA;
-  width: 44px;
-  height: 25px;
+  @include size(44px, 25px);
   font-size: 18px;
   line-height: 22px;
-  @include font-weight-400;
+  font-weight:400;
   transition: all 0.2s linear;
   margin-left: 10px;
 }
@@ -127,24 +121,14 @@ $color-white:#FFFFFF;
   background-color: #F5F3F3;
 }
 .purchases-close{
-  width: 18px;
-  height: 18px;
+  @include size(18px, 18px);
   margin-top: 25px;
   margin-left: 20px;
 }
-.section-order-purchases__buttons{
-  display: flex;
-  flex-direction: row;
-  gap: 193px;
-  width: 652px;
-  height: 50px;
-  justify-content: center;
-}
 .section-order-purchases-buttons__btn{
-  width: 234px;
-  height: 49px;
+  @include size(234px, 49px);
   font-size: 14px;
-  @include font-weight-300;
+  font-weight:300;
   line-height: 17px;
   color: #000000;
   background-color: $color-white;
@@ -158,37 +142,32 @@ $color-white:#FFFFFF;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 360px;
-  height: 544px;
+  @include size(360px, 544px);
   gap: 21px;
 }
-.section-order__forms-text{
-  width: 360px;
-  height: 272px;
+.section-order-forms{
+  @include size(360px, 272px);
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.section-order-forms__title{
-  width: 180px;
-  height: 19px;
-  @include font-weight-300;
-  font-size: 20px;
-  line-height: 19px;
-  color: $color-text;
-  text-transform: uppercase;
-}
-.section-order-forms__order-form{
-  width: 360px;
-  height: 201px;
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
+    &__title{
+      @include size(180px, 19px);
+      font-weight:300;
+      font-size: 20px;
+      line-height: 19px;
+      color: $color-text;
+      text-transform: uppercase;
+    }
+    &__order-form{
+      @include size(360px, 201px);
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+    }
 }
 .order-form__values{
-  width: 346px;
-  height: 45px;
-  @include font-weight-300;
+  @include size(346px, 45px);
+  font-weight:300;
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
@@ -196,9 +175,8 @@ $color-white:#FFFFFF;
   border: 1px solid #A4A4A4;
 }
 .order-form__btn{
-  width: 100px;
-  height: 36px;
-  @include font-weight-300;
+  @include size(100px, 36px);
+  font-weight:300;
   font-size: 11px;
   line-height: 13px;
   color: #4A4A4A;
@@ -214,8 +192,7 @@ $color-white:#FFFFFF;
 }
 .section-order-results__blocks{
   margin-top: 50px;
-  width: 360px;
-  height: 214px;
+  @include size(360px, 214px);
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -229,57 +206,52 @@ $color-white:#FFFFFF;
   margin-top: 39px;
 }
 .section-order-results-blocks__sub{
-  width: 145px;
-  height: 13px;
-  @include font-weight-400;
+  @include size(145px, 13px);
+  font-weight:400;
   font-size: 13px;
   line-height: 13px;
   color: #4A4A4A;
   text-transform: uppercase;
 }
 .section-order-results-blocks__sub-price{
-  width: 145px;
-  height: 13px;
-  @include font-weight-400;
+  @include size(145px, 13px);
+  font-weight:400;
   font-size: 13px;
   line-height: 13px;
   color: #4A4A4A;
   margin: auto 20px;
 }
 .section-order-results-blocks__grand{
-  width: 190px;
-  height: 19px;
-  @include font-weight-300;
+  @include size(190px, 19px);
+  font-weight:300;
   font-size: 16px;
   line-height: 19px;
   color: $color-text;
   text-transform: uppercase;
 }
 .section-order-results-blocks__grand-price{
-  width: 190px;
-  height: 19px;
-  @include font-weight-300;
+  @include size(190px, 19px);
+  font-weight:300;
   font-size: 16px;
   line-height: 19px;
   color: $color-pink;
   margin: auto 20px;
 }
 .hr{
-  width: 275px;
-  height: 1px;
+  @include size(275px, 1px);
   border: 1px solid #E2E2E2;
 }
 .section-order-results-blocks__btn{
-  width: 273px;
-  height: 50px;
+  @include size(273px, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
-  @include font-weight-300;
+  font-weight:300;
   font-size: 16px;
   line-height: 19px;
   color: $color-white;
   background-color: $color-pink;
+  border: 1px solid $color-pink;
   margin-left: 50px;
   margin-top: -5px;
   text-transform: uppercase;
@@ -291,8 +263,7 @@ $color-white:#FFFFFF;
 }
 /*block subscribe*/
 .subscribe {
-  width: 100%;
-  height: 448px;
+  @include size(100%, 448px);
   background-image: url("../../image/subscribe-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -301,102 +272,85 @@ $color-white:#FFFFFF;
   align-items: center;
   gap: 224px;
 }
-.subscribe__message {
+.subscribe-message {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  width: 360px;
-  height: 225px;
+  @include size(360px, 225px);
+  &__women{
+    @include size(96px, 96px);
+  }
+  &__text{
+    @include size(360px, 99px);
+    text-align: center;
+    font-size: 20px;
+    font-weight:400;
+    line-height: 24px;
+    color: #222224;
+    text-transform: none;
+  }
 }
-
-.subscribe-message__women {
-  width: 96px;
-  height: 96px;
-}
-
-.subscribe-message__text {
-  width: 360px;
-  height: 99px;
-  text-align: center;
-  font-size: 20px;
-  @include font-weight-400;
-  line-height: 24px;
-  color: #222224;
-  text-transform: none;
-}
-
-.subscribe__btn-input {
+.subscribe-btn-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 557px;
-  height: 142px;
+  @include size(557px, 142px);
+  &__text-first{
+    font-weight:700;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #222224;
+    text-transform: none;
+  }
+  &__text-two{
+    font-weight:400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #222224;
+    text-transform: none;
+  }
 }
-
-.subscribe-btn-input__text-first {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
-  color: #222224;
-  text-transform: none;
-}
-
-.subscribe-btn-input__text-two {
-  @include font-weight-400;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  color: #222224;
-  text-transform: none;
-}
-
 .input-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: -10px;
-  width: 356px;
-  height: 49px;
+  @include size(356px, 49px);
   margin-top: 32px;
+  &__text{
+    background-color: #E1E1E1;
+    border: 1px solid #E1E1E1;
+    border-radius: 25px 0px 0px 25px;
+    @include size(256px, 49px);
+    font-size: 14px;
+    font-weight:400;
+    line-height: 17px;
+    text-align: center;
+  }
+  &__button{
+    background-color: $color-pink;
+    border: 1px solid $color-pink;
+    border-radius: 0 25px 25px 0;
+    @include size(100px, 53px);
+    font-size: 14px;
+    font-weight:400;
+    line-height: 17px;
+    text-align: center;
+    color: $color-white;
+    transition: all 0.2s;
+  }
 }
-
 .input-btn__button:hover {
   background-color: $color-white;
   color: $color-pink;
   border: 1px solid $color-pink;
 }
-
 .input-btn__text:hover {
   color: black;
   background-color: $color-white;
-}
-
-.input-btn__text {
-  background-color: #E1E1E1;
-  border: 1px solid #E1E1E1;
-  border-radius: 25px 0px 0px 25px;
-  width: 256px;
-  height: 49px;
-  font-size: 14px;
-  @include font-weight-400;
-  line-height: 17px;
-  text-align: center;
-}
-
-.input-btn__button {
-  background-color: $color-pink;
-  border: 1px solid $color-pink;
-  border-radius: 0 25px 25px 0;
-  width: 100px;
-  height: 53px;
-  font-size: 14px;
-  @include font-weight-400;
-  line-height: 17px;
-  text-align: center;
-  color: $color-white;
-  transition: all 0.2s;
 }
 @media screen and (min-width: 768px) and (max-width: 1600px) {
   .section{
@@ -416,9 +370,8 @@ $color-white:#FFFFFF;
     gap: 65px;
     align-items: center;
   }
-  .section-order__purchases{
-    width: 734px;
-    height: 765px;
+  .section-order-purchases{
+    @include size(734px, 765px);
   }
   .section-order-purchases__first-purchase{
     width: 734px;
@@ -428,13 +381,11 @@ $color-white:#FFFFFF;
   }
   .section-order-purchases__buttons{
     gap: 49px;
-    width: 517px;
-    height: 49px;
+    @include size(517px, 49px);
     margin-left: 125px;
   }
   .section-order-purchases-buttons__btn{
-    width: 234px;
-    height: 49px;
+    @include size(234px, 49px);
   }
   .section-order__forms-and-results{
     flex-direction: row;
@@ -447,8 +398,7 @@ $color-white:#FFFFFF;
 
   }
   .section-order-forms__order-form{
-    width: 360px;
-    height: 232px;
+    @include size(360px, 232px);
   }
   .order-form__values{
     width: 346px;

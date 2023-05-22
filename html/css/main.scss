@@ -5,13 +5,10 @@ $background-color:#F1E4E6;
 $white-color:#FFFFFF;
 $text-color:#222222;
 
-@mixin font-weight{
-  font-weight: 700
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
 }
-@mixin font-weight-400{
-  font-weight: 400;
-}
-
 
 .class-body {
   width: 100%;
@@ -23,80 +20,80 @@ $text-color:#222222;
   align-items: center;
   text-transform: uppercase;
 }
-.main {
+.main{
   width: 100%;
   min-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-/*block main-backet*/
-.main__men-and-text {
-  background-color: $background-color;
-  height: 764px;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
-  gap: 63px;
+
+    &__men-and-text{
+      background-color: $background-color;
+      height: 764px;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+      gap: 63px;
+    }
+
+    &__advertisement{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      @include size(1140px, 470px);
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 65px;
+    }
+    &__block-with-shares{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      width: 1140px;
+    }
 }
 .men {
-  width: 801px;
-  height: 764px;
+  @include size(801px, 764px);
 }
 .text-and-stick {
   display: flex;
   flex-direction: row;
-  width: 505px;
-  height: 93px;
+  @include size(505px, 93px);
   position: relative;
   top: 289px;
   gap: 16px;
 }
-.text-name {
-  width: 500px;
-  height: 93px;
+.text-name{
+  @include size(500px, 93px);
   position: relative;
   bottom: 5px;
-}
-
-.text-name__title {
-  color:$text-color;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 0;
-}
-.text-name__body-first {
-  @include font-weight;
-  font-size: 31px;
-  line-height: 37px;
-  letter-spacing: 0;
-}
-
-.text-name__body-two {
-  @include font-weight;
-  font-size: 37px;
-  line-height: 45px;
-  letter-spacing: 0;
-  color: $pink-color;
+    &__title{
+      color:$text-color;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: 0;
+    }
+    &__body-first{
+      font-weight:700;
+      font-size: 31px;
+      line-height: 37px;
+      letter-spacing: 0;
+    }
+  &__body-two{
+    font-weight:700;
+    font-size: 37px;
+    line-height: 45px;
+    letter-spacing: 0;
+    color: $pink-color;
+  }
 }
 /*block block-advertisement*/
-.main__advertisement {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 1140px;
-  height: 470px;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 65px;
-}
-
 .main-advertisement__item {
-  width: 360px;
-  height: 260px;
+  @include size(360px, 260px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,84 +109,71 @@ $text-color:#222222;
 .kids-background {
   background-image: url("../image/kids.png");
 }
-.item__text {
-  width: 180px;
-  height: 50px;
+.item-text{
+  @include size(180px, 50px);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-}
-
-.item-text__title {
-  color: $background-color;
-  @include font-weight-400;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-}
-
-.item-text__who {
-  color: $pink-color;
-  @include font-weight;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: center;
+    &__title{
+      color: $background-color;
+      font-weight:400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+    &__who{
+      color: $pink-color;
+      font-weight:700;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
 }
 .img-background-accesories {
   background-image: url("../image/accesories.png");
-  width: 1140px;
-  height: 180px;
+  @include size(1140px, 180px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .accessories-text__title {
   color: $white-color;
-  @include font-weight-400;
+  font-weight:400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
 }
 .accessories-text__content {
-  @include font-weight;
+  font-weight:700;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
   color: $pink-color;
 }
 /*block-with-shares*/
-.main__block-with-shares {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  width: 1140px;
-}
-.block-with-shares__text {
+.block-with-shares-text{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-}
-.shares-text__title {
-  width: 182px;
-  height: 36px;
-  font-size: 25px;
-  @include font-weight-400;
-  color: $text-color;
-  line-height: 36px;
-  position: relative;
-  margin-top: 96px;
-  text-transform: none;
-}
-.shares-text__content {
-  width: 336px;
-  height: 17px;
-  @include font-weight-400;
-  font-size: 14px;
-  color: $text-color;
-  line-height: 17px;
-  text-transform: none;
+    &__title{
+      @include size(182px, 36px);
+      font-size: 25px;
+      font-weight:400;
+      color: $text-color;
+      line-height: 36px;
+      position: relative;
+      margin-top: 96px;
+      text-transform: none;
+    }
+    &__content{
+      @include size(336px, 17px);
+      font-weight:400;
+      font-size: 14px;
+      color: $text-color;
+      line-height: 17px;
+      text-transform: none;
+    }
 }
 .container {
   display: flex;
@@ -197,28 +181,31 @@ $text-color:#222222;
   justify-content: center;
   gap: 30px;
   width: 100%;
-}
-
-.container__background {
-  background-color: #F8F8F8;
-  width: 360px;
-  height: 581px;
-}
-.container__btn-buy {
-  background: rgba(58, 56, 56, 0.86);
-  color: $white-color;
-  transition: all .2s linear;
-  width: 138px;
-  height: 43px;
-  display: none;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  filter: brightness(0);
-  position: absolute;
-  z-index: 1;
-  margin-top: 150px;
-  margin-left: 120px;
+    &__img{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      @include size(360px, 581px);
+    }
+    &__background{
+      background-color: #F8F8F8;
+      @include size(360px, 581px);
+    }
+    &__btn-buy{
+      background: rgba(58, 56, 56, 0.86);
+      color: $white-color;
+      transition: all .2s linear;
+      @include size(138px, 43px);
+      display: none;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      filter: brightness(0);
+      position: absolute;
+      z-index: 1;
+      margin-top: 150px;
+      margin-left: 120px;
+    }
 }
 .container__img:hover button {
   display: block;
@@ -229,16 +216,14 @@ $text-color:#222222;
   background-color: $pink-color;
 }
 .container-btn-buy__basket {
-  width: 26px;
-  height: 24px;
+  @include size(26px, 24px);
   color: $white-color;
   margin-top: 5px;
   margin-right: 5px;
 }
 .container-btn-buy__text {
-  width: 72px;
-  height: 17px;
-  @include font-weight-400;
+  @include size(72px, 17px);
+  font-weight:400;
   font-size: 16px;
   line-height: 17px;
   text-align: center;
@@ -246,65 +231,53 @@ $text-color:#222222;
   position: relative;
   bottom: 5px;
 }
-.container__img {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 360px;
-  height: 581px;
-}
 .container-img__picture {
-  width: 360px;
-  height: 420px;
+  @include size(360px, 420px);
   transition: all 0.2s;
 }
 .container-img__picture:hover {
   filter: brightness(50%);
 }
-.container__texts {
+.container-texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.container-texts__first {
-  width: 148px;
-  height: 16px;
-  font-size: 13px;
-  line-height: 16px;
-  @include font-weight-400;
-  color: $text-color;
-  position: relative;
-  left: 12px;
-}
-.container-texts__two {
-  width: 315px;
-  height: 51px;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-  color: #5D5D5D;
-  position: relative;
-  left: 12px;
-  text-transform: none;
-}
-.container-texts__three {
-  width: 52px;
-  height: 19px;
-  @include font-weight-400;
-  font-size: 16px;
-  line-height: 19px;
-  color: $pink-color;
-  position: relative;
-  bottom: 10px;
-  left: 12px;
+    &__first{
+      @include size(148px, 16px);
+      font-size: 13px;
+      line-height: 16px;
+      font-weight:400;
+      color: $text-color;
+      position: relative;
+      left: 12px;
+    }
+    &__two{
+      @include size(315px, 51px);
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #5D5D5D;
+      position: relative;
+      left: 12px;
+      text-transform: none;
+    }
+    &__three{
+      @include size(52px, 19px);
+      font-weight:400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $pink-color;
+      position: relative;
+      bottom: 10px;
+      left: 12px;
+    }
 }
 .btn {
-  width: 211px;
-  height: 47px;
+  @include size(211px, 47px);
   background-color: #E5E5E5;
   color: #F26376;
   border: 1px solid #FF6A6A;
-  @include font-weight-400;
+  font-weight:400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -322,64 +295,56 @@ $text-color:#222222;
   height: 341px;
   flex-direction: column;
 }
-.other__background {
+.other-background {
   flex-flow: row nowrap;
   background-color: #222224;
-  width: 100%;
-  height: 341px;
+  @include size(100%, 341px);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-}
-.other-background__blocks {
-  width: 360px;
-  height: 134px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    &__blocks{
+      @include size(360px, 134px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text-body{
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 300;
+      text-align: center;
+      color: #FBFBFB;
+      @include size(360px, 34px);
+      margin-top: 16px;
+      text-transform: none;
+    }
+    &__text-title{
+      font-size: 20px;
+      line-height: 24px;
+      font-weight:400;
+      text-align: center;
+      color: #FBFBFB;
+      @include size(180px, 24px);
+      margin-top: 28px;
+      text-transform: none;
+    }
 }
 .img-car {
-  width: 45px;
-  height: 32px;
+  @include size(45px, 32px);
   margin-top: 9px;
 }
 
 .img-sale {
-  width: 40px;
-  height: 40px;
+  @include size(40px, 40px);
 }
 .img-assurance {
-  width: 47px;
-  height: 35px;
+  @include size(47px, 35px);
   margin-top: 3px;
-}
-.other-background__text-body {
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 300;
-  text-align: center;
-  color: #FBFBFB;
-  width: 360px;
-  height: 34px;
-  margin-top: 16px;
-  text-transform: none;
-}
-.other-background__text-title {
-  font-size: 20px;
-  line-height: 24px;
-  @include font-weight-400;
-  text-align: center;
-  color: #FBFBFB;
-  width: 180px;
-  height: 24px;
-  margin-top: 28px;
-  text-transform: none;
 }
 /*block subscribe*/
 .subscribe {
-  width: 100%;
-  height: 448px;
+  @include size(100%, 448px);
   background-image: url("../image/subscribe-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -388,61 +353,76 @@ $text-color:#222222;
   align-items: center;
   gap: 224px;
 }
-.subscribe__message {
+.subscribe-message {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  width: 360px;
-  height: 225px;
+  @include size(360px, 225px);
+    &__women{
+      @include size(96px, 96px);
+    }
+    &__text{
+      @include size(360px, 99px);
+      text-align: center;
+      font-size: 20px;
+      font-weight:400;
+      line-height: 24px;
+      color: #222224;
+      text-transform: none;
+    }
 }
-
-.subscribe-message__women {
-  width: 96px;
-  height: 96px;
-}
-.subscribe-message__text {
-  width: 360px;
-  height: 99px;
-  text-align: center;
-  font-size: 20px;
-  @include font-weight-400;
-  line-height: 24px;
-  color: #222224;
-  text-transform: none;
-}
-.subscribe__btn-input {
+.subscribe-btn-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 557px;
-  height: 142px;
-}
-.subscribe-btn-input__text-first {
-  @include font-weight;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
-  color: #222224;
-  text-transform: none;
-}
-
-.subscribe-btn-input__text-two {
-  @include font-weight-400;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  color: #222224;
-  text-transform: none;
+  @include size(557px, 142px);
+    &__text-first{
+      font-weight:700;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+      color: #222224;
+      text-transform: none;
+    }
+    &__text-two{
+      font-weight:400;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: #222224;
+      text-transform: none;
+    }
 }
 .input-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: -10px;
-  width: 356px;
-  height: 49px;
+  @include size(356px, 49px);
   margin-top: 32px;
+    &__text{
+      background-color: #E1E1E1;
+      border: 1px solid #E1E1E1;
+      border-radius: 25px 0px 0px 25px;
+      @include size(256px, 49px);
+      font-size: 14px;
+      font-weight:400;
+      line-height: 17px;
+      text-align: center;
+    }
+    &__button{
+      background-color: $pink-color;
+      border: 1px solid $pink-color;
+      border-radius: 0 25px 25px 0;
+      @include size(100px, 53px);
+      font-size: 14px;
+      font-weight:400;
+      line-height: 17px;
+      text-align: center;
+      color: $white-color;
+      transition: all 0.2s;
+    }
 }
 .input-btn__button:hover {
   background-color: $white-color;
@@ -453,45 +433,19 @@ $text-color:#222222;
   color: black;
   background-color: $white-color;
 }
-.input-btn__text {
-  background-color: #E1E1E1;
-  border: 1px solid #E1E1E1;
-  border-radius: 25px 0px 0px 25px;
-  width: 256px;
-  height: 49px;
-  font-size: 14px;
-  @include font-weight-400;
-  line-height: 17px;
-  text-align: center;
-}
-.input-btn__button {
-  background-color: $pink-color;
-  border: 1px solid $pink-color;
-  border-radius: 0 25px 25px 0;
-  width: 100px;
-  height: 53px;
-  font-size: 14px;
-  @include font-weight-400;
-  line-height: 17px;
-  text-align: center;
-  color: $white-color;
-  transition: all 0.2s;
-}
 /*footer*/
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 79px;
+  @include size(100%, 79px);
   background-color: #222224;
   gap: 550px;
 }
 .footer__text {
-  width: 332px;
-  height: 19px;
+  @include size(332px, 19px);
   font-size: 16px;
-  @include font-weight-400;
+  font-weight:400;
   line-height: 19px;
   color: #FBFBFB;
   text-transform: none;
@@ -499,23 +453,20 @@ $text-color:#222222;
 .footer__link {
   display: flex;
   gap: 7px;
-  width: 148px;
-  height: 32px;
+  @include size(148px, 32px);
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
 }
 .footer-link-img__social {
-  width: 12px;
-  height: 12px;
+  @include size(12px, 12px);
   filter: brightness(0);
 }
 .footer-link-img__social:hover{
   filter: brightness(1);
 }
 .footer-link__img {
-  width: 32px;
-  height: 32px;
+  @include size(32px, 32px);
   align-items: center;
   justify-content: center;
   filter: brightness(1);
@@ -534,17 +485,14 @@ $text-color:#222222;
     gap: 35px;
   }
   .men {
-    width: 386px;
-    height: 368px;
+    @include size(386px, 368px);
   }
   .text-and-stick {
-    width: 350px;
-    height: 92px;
+    @include size(350px, 92px);
     top: 100px;
   }
   .text-name {
-    width: 283px;
-    height: 78px;
+    @include size(283px, 78px);
     letter-spacing: 0;
   }
   .text-name__title {
@@ -561,13 +509,11 @@ $text-color:#222222;
   }
   /*block block-advertisement*/
   .main__advertisement {
-    width: 736px;
-    height: 303px;
+    @include size(736px, 303px);
     gap: 20px;
   }
   .main-advertisement__item {
-    width: 232px;
-    height: 168px;
+    @include size(232px, 168px);
   }
   .women-background {
     background-image: url("../image/770px/women.svg");
@@ -581,13 +527,11 @@ $text-color:#222222;
     background-image: url("../image/770px/kids.svg");
   }
   .item__text {
-    width: 154px;
-    height: 50px;
+    @include size(154px, 50px);
   }
   .img-background-accesories {
     background-image: url("../image/770px/accesories.svg");
-    width: 735px;
-    height: 116px;
+    @include size(735px, 116px);
   }
   /*block-with-shares*/
   .main__block-with-shares {
@@ -612,7 +556,7 @@ $text-color:#222222;
     flex-flow: column wrap;
     gap: 48px;
   }
-  .subscribe__btn-input {
+  .subscribe-btn-input {
     height: 137px;
   }
   /*footer*/

@@ -48,7 +48,7 @@
   gap: 128px;
 }
 
-.section-order__purchases {
+.section-order-purchases {
   width: 652px;
   height: 652px;
   display: flex;
@@ -56,7 +56,6 @@
   justify-content: center;
   gap: 40px;
 }
-
 .section-order-purchases__first-purchase {
   width: 652px;
   height: 306px;
@@ -65,18 +64,25 @@
   gap: 31px;
   box-shadow: 20px 20px 15px #E5E5E5;
 }
-
-.purchases-men {
-  width: 262px;
-  height: 306px;
-}
-
 .section-order-purchases__text {
   width: 262px;
   height: 222px;
   display: flex;
   gap: 6px;
   flex-direction: column;
+}
+.section-order-purchases__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 193px;
+  width: 652px;
+  height: 50px;
+  justify-content: center;
+}
+
+.purchases-men {
+  width: 262px;
+  height: 306px;
 }
 
 .section-order-purchases-text__title {
@@ -133,15 +139,6 @@
   margin-left: 20px;
 }
 
-.section-order-purchases__buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 193px;
-  width: 652px;
-  height: 50px;
-  justify-content: center;
-}
-
 .section-order-purchases-buttons__btn {
   width: 234px;
   height: 49px;
@@ -167,14 +164,13 @@
   gap: 21px;
 }
 
-.section-order__forms-text {
+.section-order-forms {
   width: 360px;
   height: 272px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .section-order-forms__title {
   width: 180px;
   height: 19px;
@@ -184,7 +180,6 @@
   color: #222222;
   text-transform: uppercase;
 }
-
 .section-order-forms__order-form {
   width: 360px;
   height: 201px;
@@ -299,6 +294,7 @@
   line-height: 19px;
   color: #FFFFFF;
   background-color: #F16D7F;
+  border: 1px solid #F16D7F;
   margin-left: 50px;
   margin-top: -5px;
   text-transform: uppercase;
@@ -323,7 +319,7 @@
   gap: 224px;
 }
 
-.subscribe__message {
+.subscribe-message {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -331,12 +327,10 @@
   width: 360px;
   height: 225px;
 }
-
 .subscribe-message__women {
   width: 96px;
   height: 96px;
 }
-
 .subscribe-message__text {
   width: 360px;
   height: 99px;
@@ -348,14 +342,13 @@
   text-transform: none;
 }
 
-.subscribe__btn-input {
+.subscribe-btn-input {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 557px;
   height: 142px;
 }
-
 .subscribe-btn-input__text-first {
   font-weight: 700;
   font-size: 24px;
@@ -364,7 +357,6 @@
   color: #222224;
   text-transform: none;
 }
-
 .subscribe-btn-input__text-two {
   font-weight: 400;
   font-size: 18px;
@@ -383,18 +375,6 @@
   height: 49px;
   margin-top: 32px;
 }
-
-.input-btn__button:hover {
-  background-color: #FFFFFF;
-  color: #F16D7F;
-  border: 1px solid #F16D7F;
-}
-
-.input-btn__text:hover {
-  color: black;
-  background-color: #FFFFFF;
-}
-
 .input-btn__text {
   background-color: #E1E1E1;
   border: 1px solid #E1E1E1;
@@ -406,7 +386,6 @@
   line-height: 17px;
   text-align: center;
 }
-
 .input-btn__button {
   background-color: #F16D7F;
   border: 1px solid #F16D7F;
@@ -419,6 +398,17 @@
   text-align: center;
   color: #FFFFFF;
   transition: all 0.2s;
+}
+
+.input-btn__button:hover {
+  background-color: #FFFFFF;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
+}
+
+.input-btn__text:hover {
+  color: black;
+  background-color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) {
@@ -439,7 +429,7 @@
     gap: 65px;
     align-items: center;
   }
-  .section-order__purchases {
+  .section-order-purchases {
     width: 734px;
     height: 765px;
   }

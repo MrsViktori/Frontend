@@ -17,8 +17,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-/*block main-backet*/
 .main__men-and-text {
   background-color: #F1E4E6;
   height: 764px;
@@ -28,6 +26,23 @@
   justify-content: center;
   flex-direction: row;
   gap: 63px;
+}
+.main__advertisement {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 1140px;
+  height: 470px;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 65px;
+}
+.main__block-with-shares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 1140px;
 }
 
 .men {
@@ -51,7 +66,6 @@
   position: relative;
   bottom: 5px;
 }
-
 .text-name__title {
   color: #222222;
   font-weight: 900;
@@ -59,14 +73,12 @@
   line-height: 58px;
   letter-spacing: 0;
 }
-
 .text-name__body-first {
   font-weight: 700;
   font-size: 31px;
   line-height: 37px;
   letter-spacing: 0;
 }
-
 .text-name__body-two {
   font-weight: 700;
   font-size: 37px;
@@ -76,17 +88,6 @@
 }
 
 /*block block-advertisement*/
-.main__advertisement {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 1140px;
-  height: 470px;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 65px;
-}
-
 .main-advertisement__item {
   width: 360px;
   height: 260px;
@@ -107,14 +108,13 @@
   background-image: url("../image/kids.png");
 }
 
-.item__text {
+.item-text {
   width: 180px;
   height: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
-
 .item-text__title {
   color: #F1E4E6;
   font-weight: 400;
@@ -122,7 +122,6 @@
   line-height: 19px;
   text-align: center;
 }
-
 .item-text__who {
   color: #F16D7F;
   font-weight: 700;
@@ -157,22 +156,13 @@
 }
 
 /*block-with-shares*/
-.main__block-with-shares {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  width: 1140px;
-}
-
-.block-with-shares__text {
+.block-with-shares-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
-
-.shares-text__title {
+.block-with-shares-text__title {
   width: 182px;
   height: 36px;
   font-size: 25px;
@@ -183,8 +173,7 @@
   margin-top: 96px;
   text-transform: none;
 }
-
-.shares-text__content {
+.block-with-shares-text__content {
   width: 336px;
   height: 17px;
   font-weight: 400;
@@ -201,13 +190,18 @@
   gap: 30px;
   width: 100%;
 }
-
+.container__img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 360px;
+  height: 581px;
+}
 .container__background {
   background-color: #F8F8F8;
   width: 360px;
   height: 581px;
 }
-
 .container__btn-buy {
   background: rgba(58, 56, 56, 0.86);
   color: #FFFFFF;
@@ -255,14 +249,6 @@
   bottom: 5px;
 }
 
-.container__img {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 360px;
-  height: 581px;
-}
-
 .container-img__picture {
   width: 360px;
   height: 420px;
@@ -273,12 +259,11 @@
   filter: brightness(50%);
 }
 
-.container__texts {
+.container-texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .container-texts__first {
   width: 148px;
   height: 16px;
@@ -289,7 +274,6 @@
   position: relative;
   left: 12px;
 }
-
 .container-texts__two {
   width: 315px;
   height: 51px;
@@ -301,7 +285,6 @@
   left: 12px;
   text-transform: none;
 }
-
 .container-texts__three {
   width: 52px;
   height: 19px;
@@ -341,7 +324,7 @@
   flex-direction: column;
 }
 
-.other__background {
+.other-background {
   flex-flow: row nowrap;
   background-color: #222224;
   width: 100%;
@@ -351,13 +334,34 @@
   justify-content: center;
   gap: 30px;
 }
-
 .other-background__blocks {
   width: 360px;
   height: 134px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.other-background__text-body {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  text-align: center;
+  color: #FBFBFB;
+  width: 360px;
+  height: 34px;
+  margin-top: 16px;
+  text-transform: none;
+}
+.other-background__text-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: #FBFBFB;
+  width: 180px;
+  height: 24px;
+  margin-top: 28px;
+  text-transform: none;
 }
 
 .img-car {
@@ -377,30 +381,6 @@
   margin-top: 3px;
 }
 
-.other-background__text-body {
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 300;
-  text-align: center;
-  color: #FBFBFB;
-  width: 360px;
-  height: 34px;
-  margin-top: 16px;
-  text-transform: none;
-}
-
-.other-background__text-title {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-  text-align: center;
-  color: #FBFBFB;
-  width: 180px;
-  height: 24px;
-  margin-top: 28px;
-  text-transform: none;
-}
-
 /*block subscribe*/
 .subscribe {
   width: 100%;
@@ -414,7 +394,7 @@
   gap: 224px;
 }
 
-.subscribe__message {
+.subscribe-message {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -422,12 +402,10 @@
   width: 360px;
   height: 225px;
 }
-
 .subscribe-message__women {
   width: 96px;
   height: 96px;
 }
-
 .subscribe-message__text {
   width: 360px;
   height: 99px;
@@ -439,14 +417,13 @@
   text-transform: none;
 }
 
-.subscribe__btn-input {
+.subscribe-btn-input {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 557px;
   height: 142px;
 }
-
 .subscribe-btn-input__text-first {
   font-weight: 700;
   font-size: 24px;
@@ -455,7 +432,6 @@
   color: #222224;
   text-transform: none;
 }
-
 .subscribe-btn-input__text-two {
   font-weight: 400;
   font-size: 18px;
@@ -474,18 +450,6 @@
   height: 49px;
   margin-top: 32px;
 }
-
-.input-btn__button:hover {
-  background-color: #FFFFFF;
-  color: #F16D7F;
-  border: 1px solid #F16D7F;
-}
-
-.input-btn__text:hover {
-  color: black;
-  background-color: #FFFFFF;
-}
-
 .input-btn__text {
   background-color: #E1E1E1;
   border: 1px solid #E1E1E1;
@@ -497,7 +461,6 @@
   line-height: 17px;
   text-align: center;
 }
-
 .input-btn__button {
   background-color: #F16D7F;
   border: 1px solid #F16D7F;
@@ -510,6 +473,17 @@
   text-align: center;
   color: #FFFFFF;
   transition: all 0.2s;
+}
+
+.input-btn__button:hover {
+  background-color: #FFFFFF;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
+}
+
+.input-btn__text:hover {
+  color: black;
+  background-color: #FFFFFF;
 }
 
 /*footer*/
@@ -652,7 +626,7 @@
     flex-flow: column wrap;
     gap: 48px;
   }
-  .subscribe__btn-input {
+  .subscribe-btn-input {
     height: 137px;
   }
   /*footer*/
